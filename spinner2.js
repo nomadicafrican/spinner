@@ -1,0 +1,36 @@
+process.stdout.write('hello from spinner1.js... \rheyyy\n');
+let start = 0
+let spin = ['\r|  ' , ' \r/  ' , '\r-   ' , '\r\\ ' , '\r/' , '\r-  ' , '\r| ']
+
+for (const i of spin) {
+  setTimeout(() => {
+    process.stdout.write(i);
+  }, start)
+  start += 100;
+}
+
+
+
+
+/*setTimeout(() => {
+  process.stdout.write('\r|  ');
+} ,100);
+
+setTimeout(() => {
+  process.stdout.write('\r/  ');
+}, 300);
+setTimeout(() => {
+  process.stdout.write('\r-   ');
+}, 500);
+setTimeout(() => {
+  process.stdout.write('\r\\ ')
+}, 700);
+setTimeout(() => {
+  process.stdout.write('\r/')
+}, 900);
+setTimeout(() => {
+  process.stdout.write('\r-  ')
+}, 1100);
+setTimeout(() => {
+  process.stdout.write('\r| ')
+}, 1300); */
